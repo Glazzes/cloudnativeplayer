@@ -1,0 +1,13 @@
+plugins {
+    id('groovy-gradle-plugin')
+}
+
+repositories {
+    gradlePluginPortal()
+}
+
+dependencies {
+    implementation("io.spring.dependency-management:io.spring.dependency-management.gradle.plugin:1.1.0")
+    implementation("org.springframework.boot:org.springframework.boot.gradle.plugin:3.0.6")
+    implementation("com.google.cloud.tools.jib:com.google.cloud.tools.jib.gradle.plugin:3.3.2")
+}

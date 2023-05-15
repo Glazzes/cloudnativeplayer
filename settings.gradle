@@ -1,0 +1,7 @@
+include('song')
+
+rootProject.children.forEach {
+    it.buildFileName = "${it.name}.gradle"
+}
+
+rootProject.name = 'cloudnativeplayer'
