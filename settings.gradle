@@ -1,7 +1,8 @@
-include('song')
+include('song', 'config-server')
 
 rootProject.children.forEach {
     it.buildFileName = "${it.name}.gradle"
 }
 
 rootProject.name = 'cloudnativeplayer'
+
