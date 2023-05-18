@@ -1,0 +1,16 @@
+plugins {
+    id('java')
+}
+
+group = 'com.glaze.cloudnativeplayer'
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+        vendor.set(JvmVendorSpec.AMAZON)
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

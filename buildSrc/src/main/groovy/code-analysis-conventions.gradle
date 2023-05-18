@@ -1,0 +1,20 @@
+plugins {
+    id('pmd')
+    id('checkstyle')
+}
+
+pmd {
+    consoleOutput = true
+    rulesMinimumPriority.set(5)
+    sourceSets = List.of(
+            project.sourceSets.named("main"),
+            project.sourceSets.named("test")
+    )
+
+    ruleSets = List.of()
+    ruleSetFiles = files(
+            "${rootProject.projectDir}/config/pmd/best-practices.xml",
+            "${rootProject.projectDir}/config/pmd/performance.xml",
+            "${rootProject.projectDir}/config/pmd/error_prone.xml"
+    )
+}
